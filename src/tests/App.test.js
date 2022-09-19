@@ -18,6 +18,7 @@ describe('Testa componente App', () => {
     const linkFavoritePokemons = screen.getByRole('link', { name: /favorite pokémons/i });
     expect(linkFavoritePokemons).toBeInTheDocument();
   });
+
   it('Teste se a página é redirecionada ao clicar no link Home', () => {
     const { history } = renderWithRouter(<App />);
 
@@ -31,6 +32,7 @@ describe('Testa componente App', () => {
     const homePage = screen.getByRole('heading', { name: /encountered pokémons/i });
     expect(homePage).toBeInTheDocument();
   });
+
   it('Teste se a página é redirecionada ao clicar no link About', () => {
     const { history } = renderWithRouter(<App />);
 
@@ -41,9 +43,10 @@ describe('Testa componente App', () => {
     const { pathname } = history.location;
     expect(pathname).toBe('/about');
 
-    const aboutPage = screen.findByRole('heading', { name: /encountered pokémons/i });
+    const aboutPage = screen.findByRole('heading', { name: /about pokédex/i });
     expect(aboutPage).toBeDefined();
   });
+
   it('Teste se a página é redirecionada ao clicar no link Favorite Pokémons', () => {
     const { history } = renderWithRouter(<App />);
 
@@ -54,9 +57,10 @@ describe('Testa componente App', () => {
     const { pathname } = history.location;
     expect(pathname).toBe('/favorites');
 
-    const favoritePage = screen.findByRole('heading', { name: /encountered pokémons/i });
+    const favoritePage = screen.findByRole('heading', { name: /favorite pokémons/i });
     expect(favoritePage).toBeDefined();
   });
+
   it('Teste é renderizado Not Found ao entrar em uma URL desconhecida', () => {
     const { history } = renderWithRouter(<App />);
 
