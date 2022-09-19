@@ -1,1 +1,3 @@
-test('', () => {});
+test('', () => {
+  const pr = 'abrindo';
+});
