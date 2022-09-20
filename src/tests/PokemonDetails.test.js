@@ -1,9 +1,8 @@
 import React from 'react';
-import { screen } from '@testing-library/react';
+import { screen, act } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import renderWithRouter from './renderWithRouter';
 import App from '../App';
-import { act } from 'react-dom/test-utils';
 
 describe('Testa o componente PokemonDetails', () => {
   it('É exibido na tela um h2 com o texto <name> Details', () => {
