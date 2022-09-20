@@ -2,7 +2,6 @@ import React from 'react';
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import renderWithRouter from './renderWithRouter';
-// import { Pokedex } from '../pages';
 import App from '../App';
 
 describe('Testa componente Pokedex', () => {
