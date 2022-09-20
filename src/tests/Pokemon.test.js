@@ -38,7 +38,6 @@ describe('Testa o componente Pokemon', () => {
     renderWithRouter(<App />);
 
     const typeId = screen.getByTestId('pokemon-type');
-    console.log(typeId.innerHTML);
     expect(typeId.innerHTML).toBe('Electric');
   });
   it('É exibido o link more details', () => {
